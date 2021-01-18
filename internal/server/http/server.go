@@ -1,13 +1,12 @@
 package http
 
 import (
-	"net/http"
-
 	pb "charon/api"
 	"charon/internal/model"
 	"github.com/go-kratos/kratos/pkg/conf/paladin"
 	"github.com/go-kratos/kratos/pkg/log"
 	bm "github.com/go-kratos/kratos/pkg/net/http/blademaster"
+	"net/http"
 )
 
 var svc pb.DemoServer
@@ -45,6 +44,7 @@ func ping(ctx *bm.Context) {
 		log.Error("ping error(%v)", err)
 		ctx.AbortWithStatus(http.StatusServiceUnavailable)
 	}
+	ctx.JSON(`pong`, nil)
 }
 
 // example for http request handler.
