@@ -14,7 +14,12 @@ import (
 
 func main() {
 	flag.Parse()
-	log.Init(nil) // debug flag: log.dir={path}
+	logCfg := log.Config{
+		Stdout:         false,
+		Dir:            "/Users/yangsen/logs",
+		V:              1,
+	}
+	log.Init(&logCfg) // debug flag: log.dir={path}
 	defer log.Close()
 	log.Info("charon start")
 	paladin.Init()

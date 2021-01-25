@@ -1,8 +1,17 @@
 # Charon(卡戎)
-- 卡戎（Χάρων，又译作卡隆），是古希腊神话中冥界的船夫，负责将死者渡过冥河。注意不要和半人马喀戎（Χείρων）相混。
-- 冥卫一
+- 卡戎（Χάρων，又译作卡隆），是古希腊神话中冥界的船夫，负责将死者渡过冥河。
 ## 项目简介
 1. 基于bilibili-kratos框架的学习demo
+## 初始化
+```shell script
+go get -u github.com/go-kratos/kratos/tool/kratos
+#快速创建
+kratos new kratos-demo
+#如只生成bm请加--http
+kratos new kratos-demo -o YourName -d YourPath --http
+#如只生成grpc请加--grpc，如下：
+kratos new kratos-demo -o YourName -d YourPath --grpc
+```
 ## 代码结构
 ```
 ├── CHANGELOG.md 
